@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "product_options",
+  "info": {
+    "name": "Product Options"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Option": {
+      "type": "component",
+      "repeatable": true,
+      "component": "products.option"
+    }
+  }
+}

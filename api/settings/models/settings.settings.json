@@ -1,0 +1,50 @@
+{
+  "kind": "singleType",
+  "collectionName": "options",
+  "info": {
+    "name": "options",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "top_text": {
+      "type": "richtext"
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "address": {
+      "type": "richtext"
+    },
+    "socials": {
+      "type": "component",
+      "repeatable": true,
+      "component": "site.socials"
+    },
+    "copyright": {
+      "type": "string"
+    },
+    "providers_logos": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

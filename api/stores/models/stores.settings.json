@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stores",
+  "info": {
+    "name": "stores",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "contact_info": {
+      "type": "component",
+      "repeatable": true,
+      "component": "store.info"
+    },
+    "user": {
+      "via": "store",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "products": {
+      "via": "store",
+      "collection": "product"
+    },
+    "description": {
+      "type": "text"
+    },
+    "reviews": {
+      "via": "store",
+      "collection": "review"
+    },
+    "banner": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "thumbnail": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "rating": {
+      "type": "float"
+    },
+    "orders": {
+      "via": "stores",
+      "collection": "orders"
+    },
+    "banking_details": {
+      "type": "component",
+      "repeatable": false,
+      "component": "store.banking-details"
+    },
+    "messages": {
+      "via": "store",
+      "collection": "messages"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    }
+  }
+}

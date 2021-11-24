@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notifications",
+  "info": {
+    "name": "notifications",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "headline": {
+      "type": "string"
+    },
+    "message": {
+      "type": "richtext"
+    },
+    "trigger": {
+      "type": "string"
+    },
+    "options": {
+      "type": "component",
+      "repeatable": true,
+      "component": "site.options"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "input": {
+      "type": "boolean"
+    },
+    "placeholder": {
+      "type": "text"
+    }
+  }
+}

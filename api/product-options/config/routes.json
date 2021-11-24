@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/product-options",
+      "handler": "product-options.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/product-options",
+      "handler": "product-options.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/product-options",
+      "handler": "product-options.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

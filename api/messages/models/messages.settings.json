@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "messages",
+  "info": {
+    "name": "messages",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product": {
+      "model": "product"
+    },
+    "users": {
+      "via": "messages",
+      "plugin": "users-permissions",
+      "collection": "user",
+      "dominant": true
+    },
+    "store": {
+      "via": "messages",
+      "model": "stores"
+    },
+    "thread": {
+      "type": "component",
+      "repeatable": true,
+      "component": "message.thread"
+    }
+  }
+}
